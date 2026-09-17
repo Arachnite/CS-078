@@ -1,16 +1,51 @@
 
 # Brandon Jun // COMSC 078 // Higher Order Functions
 
+"""
+Calculates the sum of f(n), from n = lower to n = upper
+
+Args:
+    f: a function in terms of n
+    lower: the lower bound of the summation
+    upper: the upper bound of the summation
+
+Returns:
+    the sum of f(n), from n = lower to n = upper
+"""
 def summation(f, lower, upper):
 
     total = 0
     while lower <= upper : total, lower = total + f(lower), lower + 1
     return total
 
+"""
+Calculates the square of n, such that n = x
+
+Args:
+    x: an integer
+    
+Returns:
+    the square of n, such that n = x
+"""
 def square(x) : return x * x
 
+"""
+Calculates the fourth power of n, such that n = x // NO USE OF X*X*X*X or math.pow(x, 4)
+
+Args:
+    x: an integer
+    
+Returns:
+    the fourth power of n, such that n = x
+"""
 def fourth_power(x) : return x**4
 
+"""
+Retrieves user input for lower and upper bounds
+Prints the sum of squares, from n = lower to n = upper
+Prints the sum of fourth powers, from n = lower to n = upper
+Prints the sum of square roots, from n = lower to n = upper, using a lambda function
+"""
 def main():
     print("User Input:")
     lower = int(input("Enter a lower bound for the sum: "))
