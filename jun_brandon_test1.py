@@ -29,3 +29,5 @@ def main():
 
         print(f"Out of 100 random numbers, {oddCount} were odd, and {evenCount} were even.")
         if input("Would you like to run the program again (Y/N: ").lower() == "n" : break
+
+main()
